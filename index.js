@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 app.use(delay(1000));
 app.use('/users', users);
+const PORT = 3000;
 
 MongoClient.connect(db_url, { useNewUrlParser: true })
     .then(client => {
